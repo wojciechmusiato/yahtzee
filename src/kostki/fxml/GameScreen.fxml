@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="586.0" prefWidth="736.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kostki.GameScreenController">
+    <children>
+        <ScrollPane fx:id="scrollPaneScore" layoutX="14.0" layoutY="41.0" prefHeight="478.0" prefWidth="470.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="41.0">
+            <content>
+                <GridPane fx:id="scorePane" prefHeight="472.0" prefWidth="138.0">
+                    <columnConstraints>
+                        <ColumnConstraints fillWidth="true" halignment="CENTER" hgrow="ALWAYS" maxWidth="-Infinity" minWidth="20.0" prefWidth="40.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                    </rowConstraints>
+                    <padding>
+                        <Insets top="4.0" />
+                    </padding>
+                    <children>
+                        <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: BLACK;" GridPane.rowIndex="2">
+                            <effect>
+                                <Glow />
+                            </effect>
+                        </Pane>
+                        <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: GRAY;" GridPane.rowIndex="3" />
+                    </children>
+                </GridPane>
+            </content>
+        </ScrollPane>
+        <Label fx:id="infoText" layoutX="14.0" layoutY="14.0" text="LABEL">
+            <font>
+                <Font name="Verdana" size="15.0" />
+            </font>
+        </Label>
+        <Button fx:id="rollButton" layoutX="497.0" layoutY="41.0" mnemonicParsing="false" onAction="#makeRoll">
+            <graphic>
+                <ImageView fitHeight="178.0" fitWidth="242.0" pickOnBounds="true" preserveRatio="true" visible="true">
+                    <image>
+                        <Image url="@images/roll.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <HBox fx:id="deuceBox" alignment="CENTER" layoutX="483.0" layoutY="234.0" prefHeight="58.0" prefWidth="283.0">
+            <children>
+                <StackPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" onMouseClicked="#dice1Clicked" prefHeight="42.0" prefWidth="40.0">
+                    <children>
+                        <ImageView fx:id="imageOne" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" visible="true" StackPane.alignment="CENTER">
+                            <image>
+                                <Image url="@images/1.jpg" />
+                            </image>
+                        </ImageView>
+                    </children>
+                    <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </HBox.margin>
+                </StackPane>
+                <StackPane alignment="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" onMouseClicked="#dice2Clicked" prefHeight="43.0" prefWidth="40.0">
+                    <children>
+                        <ImageView fx:id="imageTwo" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" visible="true" StackPane.alignment="CENTER">
+                            <image>
+                                <Image url="@images/2.jpg" />
+                            </image>
+                        </ImageView>
+                    </children>
+                    <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </HBox.margin>
+                </StackPane>
+                <StackPane alignment="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" onMouseClicked="#dice3Clicked" prefHeight="41.0" prefWidth="40.0">
+                    <children>
+                        <ImageView fx:id="imageThree" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" visible="true" StackPane.alignment="CENTER">
+                            <image>
+                                <Image url="@images/3.jpg" />
+                            </image>
+                        </ImageView>
+                    </children>
+                    <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </HBox.margin>
+                </StackPane>
+                <StackPane alignment="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" onMouseClicked="#dice4Clicked" prefHeight="43.0" prefWidth="40.0">
+                    <children>
+                        <ImageView fx:id="imageFour" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" visible="true" StackPane.alignment="CENTER">
+                            <image>
+                                <Image url="@images/4.jpg" />
+                            </image>
+                        </ImageView>
+                    </children>
+                    <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </HBox.margin>
+                </StackPane>
+                <StackPane alignment="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" onMouseClicked="#dice5Clicked" prefHeight="43.0" prefWidth="40.0">
+                    <children>
+                        <ImageView fx:id="imageFive" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" visible="true" StackPane.alignment="CENTER">
+                            <image>
+                                <Image url="@images/5.jpg" />
+                            </image>
+                        </ImageView>
+                    </children>
+                    <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="20.0" top="5.0" />
+                    </HBox.margin>
+                </StackPane>
+            </children>
+        </HBox>
+        <Button fx:id="endRollButton" layoutX="498.0" layoutY="338.0" mnemonicParsing="false" onAction="#endRoll" prefHeight="26.0" prefWidth="234.0" text="Koniec rzutu" />
+        <ListView fx:id="figures" layoutX="498.0" layoutY="377.0" prefHeight="141.0" prefWidth="234.0" />
+        <Button fx:id="confirmButton" layoutX="497.0" layoutY="298.0" mnemonicParsing="false" onAction="#onConfirm" prefHeight="26.0" prefWidth="234.0" text="Zatwierdź Wybór" visible="false" />
+        <Button fx:id="musicButton" layoutX="63.0" layoutY="535.0" mnemonicParsing="false" onAction="#playMusic" prefHeight="28.0" prefWidth="36.0">
+            <graphic>
+                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" visible="true">
+                    <image>
+                        <Image url="@images/play.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Button layoutX="108.0" layoutY="535.0" mnemonicParsing="false" onAction="#stopMusic">
+            <graphic>
+                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" visible="true">
+                    <image>
+                        <Image url="@images/stop.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Button fx:id="prevSong" disable="true" layoutX="16.0" layoutY="535.0" mnemonicParsing="false" onAction="#prevSong">
+            <graphic>
+                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" visible="true">
+                    <image>
+                        <Image url="@images/prev.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+      <Button fx:id="nextSong" layoutX="154.0" layoutY="535.0" mnemonicParsing="false" onAction="#nextSong">
+          <graphic>
+              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" visible="true">
+                  <image>
+                      <Image url="@images/next.png" />
+                  </image>
+              </ImageView>
+          </graphic>
+      </Button>
+      <Label fx:id="throwNrLabel" layoutX="498.0" layoutY="16.0" text="Label">
+         <font>
+            <Font name="Verdana" size="15.0" />
+         </font></Label>
+    
+    </children>
+</AnchorPane>

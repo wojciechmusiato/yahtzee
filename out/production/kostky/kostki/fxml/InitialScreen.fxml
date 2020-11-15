@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kostki.InitialScreenController">
+   <children>
+      <VBox alignment="CENTER" prefWidth="100.0" spacing="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <Label text="Wybierz sb ilość graczy">
+               <font>
+                  <Font name="Webdings" size="15.0" />
+               </font></Label>
+            <ComboBox fx:id="comboPlayerNumber" onAction="#showPlayers" prefWidth="50.0" promptText="2">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </ComboBox>
+            <FlowPane alignment="CENTER" prefHeight="10.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="exitButton" mnemonicParsing="false" onAction="#exit" text="Zwalam stąd">
+                     <FlowPane.margin>
+                        <Insets right="5.0" />
+                     </FlowPane.margin>
+                  </Button>
+                  <Button fx:id="startButton" mnemonicParsing="false" onAction="#startGame" text="Granko">
+                     <FlowPane.margin>
+                        <Insets left="5.0" />
+                     </FlowPane.margin>
+                  </Button>
+               </children>
+            </FlowPane>
+         </children>
+      </VBox>
+      <VBox fx:id="vBoxPlayers" prefHeight="200.0" prefWidth="100.0" spacing="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="120.0">
+         <children>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
