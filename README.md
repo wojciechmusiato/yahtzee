@@ -1,5 +1,5 @@
 #  Polish Yahtzee
-This is a variation of Yahtzee played by my girlfriends grandparents. Since we wanted to play it and buying deuce was such bother, I programmed a desktop game in JavaFX.
+This is a variation of Yahtzee played by my girlfriend's grandparents. Since we wanted to play it and buying deuce was such bother, I programmed a desktop game in JavaFX.
 Enjoy!
 
 ![alt text](https://raw.githubusercontent.com/wojciechmusiato/yahtzee/master/Untitled.png "Logo Title Text 1")
