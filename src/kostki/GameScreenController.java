@@ -11,6 +11,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
+import kostki.*;
 import kostki.model.Player;
 
 import java.util.*;
@@ -136,7 +137,7 @@ public class GameScreenController {
         scorePane.add(l, 1, 1, gameProperties.getPlayers().size() * 3, 1);
         scorePane.add(new Label("UNIWERSYTET"), 1, 10, gameProperties.getPlayers().
                 size() * 3, 1);
-        throwNrLabel.setText("Rzucaj debilu");
+        throwNrLabel.setText("Rzucaj!");
 
 
         actualimages.add(new Image(getClass().getResourceAsStream("fxml/images/1.jpg")));

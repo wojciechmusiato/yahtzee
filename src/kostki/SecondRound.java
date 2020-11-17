@@ -3,7 +3,6 @@ package kostki;
 import kostki.model.Figure;
 import kostki.model.Roll;
 
-import java.lang.reflect.Array;
 import java.util.*;
 
 public class SecondRound implements Round {
@@ -133,7 +132,6 @@ public class SecondRound implements Round {
         gameProperties.playerIndex++;
         gsc.currentPlayer = gameProperties.getNextPlayer();
         gsc.setMessage(gsc.currentPlayer.getPlayerName() + "'s turn");
-        gsc.throwNrLabel.setText("Rzucaj, " + GameProperties.randomSlur() );
 
     }
     @Override

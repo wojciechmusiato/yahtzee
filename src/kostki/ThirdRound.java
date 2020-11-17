@@ -124,7 +124,6 @@ public class ThirdRound implements Round {
         gameProperties.playerIndex++;
         gsc.currentPlayer = gameProperties.getNextPlayer();
         gsc.setMessage(gsc.currentPlayer.getPlayerName() + "'s turn");
-        gsc.throwNrLabel.setText("Rzucaj, " + GameProperties.randomSlur() );
 
     }
 
