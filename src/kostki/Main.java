@@ -21,7 +21,7 @@ public class Main extends Application {
         AnchorPane pane = load.load();
 
         Scene scene = new Scene(pane,250,300);
-        primaryStage.setTitle("Siemka");
+        primaryStage.setTitle("Yahtzee");
         primaryStage.setResizable(false);
         primaryStage.setScene(scene);
         primaryStage.show();

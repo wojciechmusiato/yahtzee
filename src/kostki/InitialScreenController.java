@@ -61,7 +61,7 @@ public class InitialScreenController {
     }
     private void showActualPlayers(int num){
         for(int i = 0; i < num; i++){
-            TextField textField = new TextField("Koteł "+ (i + 1));
+            TextField textField = new TextField("Player "+ (i + 1));
             vBoxPlayers.getChildren().add(textField);
         }
         GameProperties.numOfPlayers=num;

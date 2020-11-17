@@ -9,7 +9,7 @@
    <children>
       <VBox alignment="CENTER" prefWidth="100.0" spacing="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
          <children>
-            <Label text="Wybierz sb ilość graczy">
+            <Label text="Pick number of players">
                <font>
                   <Font name="Webdings" size="15.0" />
                </font></Label>
@@ -20,12 +20,12 @@
             </ComboBox>
             <FlowPane alignment="CENTER" prefHeight="10.0" prefWidth="200.0">
                <children>
-                  <Button fx:id="exitButton" mnemonicParsing="false" onAction="#exit" text="Zwalam stąd">
+                  <Button fx:id="exitButton" mnemonicParsing="false" onAction="#exit" text="Exit">
                      <FlowPane.margin>
                         <Insets right="5.0" />
                      </FlowPane.margin>
                   </Button>
-                  <Button fx:id="startButton" mnemonicParsing="false" onAction="#startGame" text="Granko">
+                  <Button fx:id="startButton" mnemonicParsing="false" onAction="#startGame" text="Play!">
                      <FlowPane.margin>
                         <Insets left="5.0" />
                      </FlowPane.margin>

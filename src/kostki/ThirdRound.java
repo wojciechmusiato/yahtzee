@@ -55,7 +55,7 @@ public class ThirdRound implements Round {
             gsc.disableRollButton(true);
         }
         gsc.setListView();
-        gsc.throwNrLabel.setText("Rzut nr " + rollNr);
+        gsc.throwNrLabel.setText("Throw nr " + rollNr);
 
     }
 
@@ -69,7 +69,7 @@ public class ThirdRound implements Round {
         String score = gsc.figures.getSelectionModel().getSelectedItem().replaceAll("\\s+", "");
         score = score.replaceAll("[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ]*", "");
 
-        if (Arrays.asList(Figure.ONES, Figure.TWOS, Figure.THREES, Figure.FOURS, Figure.FIVES, Figure.SIXES).contains(gameProperties.stringToEnum(fig))) {
+        if (Arrays.asList(Figure.ACES, Figure.TWOS, Figure.THREES, Figure.FOURS, Figure.FIVES, Figure.SIXES).contains(gameProperties.stringToEnum(fig))) {
             System.out.println(score);
             System.out.println(gsc.currentPlayer.getSchoolScore());
             gsc.currentPlayer.addSchoolScore(Integer.parseInt(score));
@@ -81,7 +81,7 @@ public class ThirdRound implements Round {
 
         gsc.currentPlayer.removeFigure(gameProperties.stringToEnum(fig));
         boolean containsSchool = false;
-        for (Figure f : Arrays.asList(Figure.ONES, Figure.TWOS, Figure.THREES, Figure.FOURS, Figure.FIVES, Figure.SIXES)) {
+        for (Figure f : Arrays.asList(Figure.ACES, Figure.TWOS, Figure.THREES, Figure.FOURS, Figure.FIVES, Figure.SIXES)) {
             if (gsc.currentPlayer.getFigureList().contains(f)) {
                 containsSchool = true;
                 break;
@@ -110,7 +110,7 @@ public class ThirdRound implements Round {
                         max = p;
                     }
                 }
-                gsc.setMessage("WYGRANKO!!! BRAWO DLA "+ max.getPlayerName() );
+                gsc.setMessage("WE HAVE A WINNER!!! CONGRATS TO "+ max.getPlayerName() );
                 gsc.musicPlayer.playMusic();
                 return;
             }

@@ -60,25 +60,25 @@ public class GameScreenController {
 
     private void initializeScoreTable() {
         figToTable = new HashMap<>();
-        figToTable.put("Jedynki", 3);
-        figToTable.put("Dwójki", 4);
-        figToTable.put("Trójki", 5);
-        figToTable.put("Czwórki", 6);
-        figToTable.put("Piątki", 7);
-        figToTable.put("Szóstki", 8);
-        figToTable.put("Para", 11);
-        figToTable.put("DwiePary", 12);
-        figToTable.put("Trójka", 13);
-        figToTable.put("Kareta", 14);
-        figToTable.put("MałyFull", 15);
-        figToTable.put("DużyFull", 16);
-        figToTable.put("MałyStreet", 17);
-        figToTable.put("DużyStreet", 18);
-        figToTable.put("Pies", 19);
-        figToTable.put("Parzyste", 20);
-        figToTable.put("Nieparzyste", 21);
-        figToTable.put("Szansa", 22);
-        figToTable.put("Generał", 23);
+        figToTable.put("Aces", 3);
+        figToTable.put("Twos", 4);
+        figToTable.put("Threes", 5);
+        figToTable.put("Fours", 6);
+        figToTable.put("Fives", 7);
+        figToTable.put("Sixes", 8);
+        figToTable.put("Pair", 11);
+        figToTable.put("Twopair", 12);
+        figToTable.put("Three", 13);
+        figToTable.put("Four-of-a-kind", 14);
+        figToTable.put("SmallFull", 15);
+        figToTable.put("BigFull", 16);
+        figToTable.put("SmallStraight", 17);
+        figToTable.put("BigStraight", 18);
+        figToTable.put("Dog", 19);
+        figToTable.put("Even", 20);
+        figToTable.put("Odd", 21);
+        figToTable.put("Chance", 22);
+        figToTable.put("Yahtzee", 23);
 
         scorePane.add(new Label("1"), 0, 3, 1, 1);
         scorePane.add(new Label("2"), 0, 4, 1, 1);
@@ -131,13 +131,13 @@ public class GameScreenController {
 
         }
 
-        Label l = new Label("SZKOŁA");
+        Label l = new Label("SCHOOL");
         l.setStyle("\"-fx-background-color: #FFFFFF;\"");
 
         scorePane.add(l, 1, 1, gameProperties.getPlayers().size() * 3, 1);
-        scorePane.add(new Label("UNIWERSYTET"), 1, 10, gameProperties.getPlayers().
+        scorePane.add(new Label("UNIVERSITY"), 1, 10, gameProperties.getPlayers().
                 size() * 3, 1);
-        throwNrLabel.setText("Rzucaj!");
+        throwNrLabel.setText("Your Turn!");
 
 
         actualimages.add(new Image(getClass().getResourceAsStream("fxml/images/1.jpg")));

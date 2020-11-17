@@ -1,48 +1,48 @@
 package kostki.model;
 
 public enum Figure {
-    ONES, TWOS, THREES, FOURS, FIVES, SIXES, PAIR, TWOPAIR, THREE, KARETA, SFULL, BFULL, SSTREET, BSTREET, DOG, EVEN, ODD, CHANCE, GENERAL;
+    ACES, TWOS, THREES, FOURS, FIVES, SIXES, PAIR, TWOPAIR, THREE, KARETA, SFULL, BFULL, SSTRAIGHT, BSTREET, DOG, EVEN, ODD, CHANCE, YAHTZEE;
 
     @Override
     public String toString() {
         if (Figure.PAIR == this) {
-            return "Para";
+            return "Pair";
         } else if (Figure.TWOPAIR == this) {
-            return "Dwie Pary";
+            return "Twopair";
         } else if (Figure.THREE == this) {
-            return "Trójka";
+            return "Three";
         } else if (Figure.KARETA == this) {
-            return "Kareta";
-        } else if (Figure.GENERAL == this) {
-            return "Generał";
-        } else if (Figure.SSTREET == this) {
-            return "Mały Street";
+            return "Four-of-a-kind";
+        } else if (Figure.YAHTZEE == this) {
+            return "Yahtzee";
+        } else if (Figure.SSTRAIGHT == this) {
+            return "Small Straight";
         } else if (Figure.BSTREET == this) {
-            return "Duży Street";
+            return "Big Straight";
         } else if (Figure.DOG == this) {
-            return "Pies ";
+            return "Dog ";
         } else if (Figure.CHANCE == this) {
-            return "Szansa";
+            return "Chance";
         } else if (Figure.BFULL == this) {
-            return "Duży Full";
+            return "Big Full";
         } else if (Figure.SFULL == this) {
-            return "Mały Full";
-        } else if (Figure.ONES == this) {
-            return "Jedynki";
+            return "Small Full";
+        } else if (Figure.ACES == this) {
+            return "Aces";
         } else if (Figure.TWOS == this) {
-            return "Dwójki";
+            return "Twos";
         } else if (Figure.THREES == this) {
-            return "Trójki";
+            return "Threes";
         } else if (Figure.FOURS == this) {
-            return "Czwórki";
+            return "Fours";
         } else if (Figure.FIVES == this) {
-            return "Piątki";
+            return "Fives";
         } else if (Figure.SIXES == this) {
-            return "Szóstki";
+            return "Sixes";
         } else if (Figure.EVEN == this) {
-            return "Parzyste";
+            return "Even";
         } else if (Figure.ODD == this) {
-            return "Nieparzyste";
-        } else return "?";
+            return "Odd";
+        } else return "ERROR";
     }
 }

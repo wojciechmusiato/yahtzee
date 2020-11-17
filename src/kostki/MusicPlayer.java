@@ -28,20 +28,21 @@ public class MusicPlayer {
         }
     }
     public void playMusic(){
-        if(songIndex == songs.size()-1){
-            gsc.nextSong.setDisable(true);
-        }else if(songIndex == 0){
-            gsc.prevSong.setDisable(true);
-        }else if(songIndex > 0 && songIndex != songs.size()-1){
-            gsc.prevSong.setDisable(false);
-            gsc.nextSong.setDisable(false);
+        if(!songs.isEmpty()) {
+            if (songIndex == songs.size() - 1) {
+                gsc.nextSong.setDisable(true);
+            } else if (songIndex == 0) {
+                gsc.prevSong.setDisable(true);
+            } else if (songIndex > 0 && songIndex != songs.size() - 1) {
+                gsc.prevSong.setDisable(false);
+                gsc.nextSong.setDisable(false);
+            }
+            stop();
+            String bip = songs.get(songIndex);
+            Media hit = new Media(Paths.get(bip).toUri().toString());
+            mediaPlayer = new AudioClip(hit.getSource());
+            mediaPlayer.play();
         }
-        stop();
-        String bip = songs.get(songIndex);
-        Media hit = new Media(Paths.get(bip).toUri().toString());
-        mediaPlayer = new AudioClip(hit.getSource());
-        mediaPlayer.play();
-
     }
     public void stop(){
         if(mediaPlayer!=null)

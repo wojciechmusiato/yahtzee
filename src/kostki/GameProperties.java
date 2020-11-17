@@ -50,25 +50,25 @@ public class GameProperties {
 
     public Figure stringToEnum(String s){
         switch (s){
-            case "Para":        return Figure.PAIR;
-            case "DwiePary":    return Figure.TWOPAIR;
-            case "Trójka":      return Figure.THREE;
-            case "Kareta":      return Figure.KARETA;
-            case "Generał":     return Figure.GENERAL;
-            case "MałyStreet":  return Figure.SSTREET;
-            case "DużyStreet":  return Figure.BSTREET;
-            case "Pies":        return Figure.DOG;
-            case "Szansa":      return Figure.CHANCE;
-            case "MałyFull":    return Figure.SFULL;
-            case "DużyFull":    return Figure.BFULL;
-            case "Jedynki":     return Figure.ONES;
-            case "Dwójki":      return Figure.TWOS;
-            case "Trójki":      return Figure.THREES;
-            case "Czwórki":     return Figure.FOURS;
-            case "Piątki":      return Figure.FIVES;
-            case "Szóstki":     return Figure.SIXES;
-            case "Nieparzyste":     return Figure.ODD;
-            case "Parzyste":     return Figure.EVEN;
+            case "Pair":        return Figure.PAIR;
+            case "Twopair":    return Figure.TWOPAIR;
+            case "Three":      return Figure.THREE;
+            case "Four-of-a-kind":      return Figure.KARETA;
+            case "Yahtzee":     return Figure.YAHTZEE;
+            case "SmallStraight":  return Figure.SSTRAIGHT;
+            case "BigStraight":  return Figure.BSTREET;
+            case "Dog":        return Figure.DOG;
+            case "Chance":      return Figure.CHANCE;
+            case "SmallFull":    return Figure.SFULL;
+            case "BigFull":    return Figure.BFULL;
+            case "Aces":     return Figure.ACES;
+            case "Twos":      return Figure.TWOS;
+            case "Threes":      return Figure.THREES;
+            case "Fours":     return Figure.FOURS;
+            case "Fives":      return Figure.FIVES;
+            case "Sixes":     return Figure.SIXES;
+            case "Odd":     return Figure.ODD;
+            case "Even":     return Figure.EVEN;
 
         }
         return Figure.PAIR;

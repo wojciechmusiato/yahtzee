@@ -60,15 +60,15 @@ public class Roll {
                     figureMap.put(Figure.PAIR, 12);
                     figureMap.put(Figure.TWOPAIR, 24);
                     figureMap.put(Figure.KARETA, 24 * firstRollMultiplier);
-                    figureMap.put(Figure.GENERAL, 5 * (i + 1) * firstRollMultiplier);
+                    figureMap.put(Figure.YAHTZEE, 5 * (i + 1) * firstRollMultiplier);
                     figureMap.put(Figure.THREE, 18);
-                    figureMap.put(Figure.ONES, 2);
+                    figureMap.put(Figure.ACES, 2);
                     figureMap.put(Figure.TWOS, 4);
                     figureMap.put(Figure.THREES, 6);
                     figureMap.put(Figure.FOURS, 8);
                     figureMap.put(Figure.FIVES, 10);
                     figureMap.put(Figure.SIXES, 12);
-                    figureMap.put(Figure.SSTREET, 15 * firstRollMultiplier);
+                    figureMap.put(Figure.SSTRAIGHT, 15 * firstRollMultiplier);
                     figureMap.put(Figure.BSTREET, 20 * firstRollMultiplier);
                     figureMap.put(Figure.SFULL, 21 * firstRollMultiplier);
                     figureMap.put(Figure.BFULL, 30 * firstRollMultiplier);
@@ -95,7 +95,7 @@ public class Roll {
             if (freq.get(0) == 0) {
                 figureMap.put(Figure.BSTREET, 20 * firstRollMultiplier);
             } else if (freq.get(5) == 0) {
-                figureMap.put(Figure.SSTREET, 15 * firstRollMultiplier);
+                figureMap.put(Figure.SSTRAIGHT, 15 * firstRollMultiplier);
             } else {
                 if (freq.get(1) == 0) {
                     figureMap.put(Figure.DOG, 19 * firstRollMultiplier);
@@ -109,7 +109,7 @@ public class Roll {
             }
         }
         figureMap.put(Figure.CHANCE, freq.get(0) + 2 * freq.get(1) + 3 * freq.get(2) + 4 * freq.get(3) + 5 * freq.get(4) + 6 * freq.get(5));
-        figureMap.put(Figure.ONES, freq.get(0) - 3);
+        figureMap.put(Figure.ACES, freq.get(0) - 3);
         figureMap.put(Figure.TWOS, 2 * freq.get(1) - 6);
         figureMap.put(Figure.THREES, 3 * freq.get(2) - 9);
         figureMap.put(Figure.FOURS, 4 * freq.get(3) - 12);
